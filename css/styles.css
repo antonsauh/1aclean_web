@@ -3,9 +3,10 @@
     height:100vh;
     text-align: center;
     background-color: #80bfff;
-    background-image: url(../resources/1a-clean.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../resources/1a-clean.svg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 body {
@@ -17,10 +18,15 @@ html {
     background-color:#ffffff;
     font-family: 'Anton', sans-serif;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+}
 #logo{
     opacity:0;
     width: 0%;
-    height: 0%;
 }
 #nav-buttons {
     list-style: none;
@@ -28,6 +34,7 @@ html {
     opacity: 0;
     display:flex;
     justify-content: space-evenly;
+    display: none;
 }
 .nav-button{
     padding: 2vh 8vh 2vh 8vh;
@@ -37,28 +44,116 @@ html {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    background-color:#ddeaff;
+    background-color: rgb(255, 255, 255, 0.3);
     font-family: 'Anton', sans-serif;
     
+}
+.nav-button:hover{
+    background-color: rgb(255, 255, 255, 0.8);
 }
 .nav-button:focus{
     outline: 0;
 }
 #hinnad {
     height:100%;
-    background-color: #ffffff;
     z-index: 10;
     position: relative;
 }
-
-#hinnad-header {
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-    text-align: center;
-}
 #hinnad-header-text {
     font-size: 3em;
+}
+#kontakt {
+    border-top: dotted 4px #6986E8;
+    background-color: white;
+}
+#kontakt-data-container {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    text-align: center;
+}
+#kontakt-text{
+    width:30%;
+}
+#kontakt-data-container img{
+    width: 40%;
+}
+#map{
+    align-content: center;
+    text-align: center;
+}
+#kontakt h1 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 2%;
+}
+#kontakt a {
+    padding-left: 2%;
+}
+#kontakt p{
+    padding-left: 2%;
+}
+#kontakt #kontakt-no-margin{
+    margin-bottom: 0px;
+    padding-bottom: 2%;
+}
+
+/* PRICE BOARD*/
+.price_board_container {
+    background-color:whitesmoke;
+}
+.price_board_container h1 {
+    margin-top:0px;
+    text-align: center;
+    color: #2e3192;
+    padding-top:25px;
+    font-size:6vw;
+    font-family: 'Abril Fatface', cursive;
+    margin-bottom:1%;
+}
+.price_board {
+    width:40%;
+    margin: 4.6%;
+    margin-top:1%;
+    display:inline-block;
+    background-color:white;
+    font-family: 'Abril Fatface', cursive;
+    color:#2e3192;
+    border: 2px solid #2e3192;
+    vertical-align: top;
+}
+.price_board_header {
+	text-align: center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    font-size:2.5vw;
+    border-bottom: 2px solid #2e3192;
+}
+.price_board_footer {
+	text-align: center;
+    font-size:2vw;
+    border-top: 2px solid #2e3192;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+
+.list_element_1 {
+	width:60%;
+    display:inline-block;
+    font-size:2vw;
+    margin-bottom:10px;
+    font-family: 'Cuprum', sans-serif;
+}
+.list_element_2 {
+	width:30%;
+    display:inline-block;
+        text-align:right;
+    color:black;
+    font-size:2vw;
+    margin-bottom:10px;
+}
+.table_last_element {
+    margin-bottom:0px !important;
 }
 
 /* KEYFRAMES */
@@ -255,9 +350,9 @@ html {
 	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
 	
-    height: 200px;
+    height: 25vh;
 	position: absolute;
-    width: 200px;
+    width: 25vh;
 }
 
 .bubble:after {
@@ -278,8 +373,90 @@ html {
 	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
 	
 	content: "";
-    height: 180px;
+    height: 23vh;
 	left: 10px;
 	position: absolute;
-    width: 180px;
+    width: 23vh;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .x1 {
+        display: none;
+    }
+    .x2 {
+        display: none;
+    }
+    .x3 {
+        display: none;
+    }
+    .x4 {
+        display: none;
+    }
+    .x5 {
+        display: none;
+    }
+    .x6 {
+        display: none;
+    }
+    .x7 {
+        display: none;
+    }
+    .x8 {
+        display: none;
+    }
+    .x9 {
+        display: none;
+    }
+    .x10 {
+        display: none;
+    }
+
+    #logo {
+        padding-left: 8vh;
+    }
+
+    .nav-button{
+        padding: 1vh 4vh 1vh 4vh;
+        border: 2px solid #6986E8;
+        font-size: 2em;
+        color: #2f348b;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        background-color:#ddeaff;
+        font-family: 'Anton', sans-serif;
+    }
+    .price_board {
+        width:70%;
+        margin-left:15%;
+        margin-right:15%;
+    }
+    .price_board_container h1 {
+        padding-top:10px;
+        font-size:10vw;
+    }
+    .list_element_1 {
+	margin-bottom:5px;
+    font-size:3.5vw;
+}
+    .list_element_2 {
+	margin-bottom:5px;
+    font-size:3.5vw;
+}
+    .price_board_footer {
+	font-size:4vw;
+}
+    .price_board_header {
+	font-size:4.5vw;
+}
+#kontakt-data-container{
+    display:inline-block;
+}
+#kontakt-text {
+    width:100%;
+}
+#kontakt-data-container img{
+    width: 80%;
+}
+  }
